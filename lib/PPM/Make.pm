@@ -82,7 +82,7 @@ sub make_ppm {
       print "Found a local distribution: $local_dist\n";
       my $basename = basename($local_dist);
       copy($local_dist, File::Spec->catfile($build_dir, $basename));
-      $self->{search}->{no_remote_lookup} = 0;
+      $self->{search}->{no_remote_lookup} = 1; 
     }
 
     die $self->{fetch_error} 
